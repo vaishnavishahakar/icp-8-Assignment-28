@@ -8,17 +8,19 @@
 
     <style>
         body {
-            background-color: rgb(219, 252, 252);
+            background-color: rgb(230, 253, 253);
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         .app-container {
-            width: 300px;
-            height: 390px;
+            width: 400px;
+            height: 350px;
             border: 1px solid grey;
             text-align: center;
             margin-top: 50px;
             border-radius: 20px;
             box-shadow: 2px 0 8px 0;
+            font-size: 15px;
         }
 
         .input-box {
@@ -37,43 +39,49 @@
 
         .btn-action {
             width: 150px;
-            margin-top: 30px;
+            margin-top: 20px;
+            margin-left: 5px;
             background-color: bisque;
             border-radius: 50px;
             border-width: 10px;
             height: 50px;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         .text-result {
             width: 0;
             padding: 0;
-            font-size: 30px;
+            font-size: 25px;
+            text-align: center;
+            font-weight: bold;
+            display: inline;
         }
     </style>
 </head>
 
 <body>
     <center>
-    <div class="app-container">
-        <h1 class="app-heading">Sum Of Two Numbers</h1>
-        <input type="text" class="input-box" id="input-num1" onkeyup="calSum()" />
-        <input type="text" class="input-box" id="input-num2" onkeyup="calSum()" />
-        <p class="text-result" id="text-result"></p>
-
-        <div>
-            <button type="button" class="btn-action" onclick="calSum()">
-                Calculate
-            </button>
-            <button type="button" class="btn-action" onclick="reset()">
-                Reset
-            </button>
+        <div class="app-container">
+            <h1 class="app-heading">Sum Of Two Numbers</h1>
+            <input type="text" class="input-box" id="input-num1" onkeyup="calSum()" />
+            <input type="text" class="input-box" id="input-num2" onkeyup="calSum()" />
+            <center>
+                <p class="text-result" id="text-result"></p>
+            </center>
+            <div>
+                <button type="button" class="btn-action" onclick="calSum()">
+                    Calculate
+                </button>
+                <button type="button" class="btn-action" onclick="reset()">
+                    Reset
+                </button>
+            </div>
         </div>
-    </div>
-</center>
+    </center>
 
     <script>
-        function calSum()
-        {
+        function calSum() {
             const num1Element = document.getElementById("input-num1");
             const num2Element = document.getElementById("input-num2");
 
@@ -83,8 +91,7 @@
 
             resultElement.innerText = `Sum: ${sum}`
         }
-        function reset()
-        {
+        function reset() {
             const num1Element = document.getElementById("input-num1");
             num1Element.value = "";
 
