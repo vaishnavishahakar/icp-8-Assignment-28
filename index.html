@@ -70,7 +70,17 @@
 </center>
 
     <script>
+        function calSum()
+        {
+            const num1Element = document.getElementById("input-num1");
+            const num2Element = document.getElementById("input-num2");
 
+            const sum = parseInt(num1Element.value || 0) + parseInt(num2Element.value || 0);
+
+            const resultElement = document.getElementById("text-result");
+
+            resultElement.innerText = `Sum: ${sum}`
+        }
     </script>
 </body>
 
