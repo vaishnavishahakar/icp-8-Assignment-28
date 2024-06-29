@@ -48,7 +48,22 @@
     </div>
 
     <script>
-       
+        function compareText()
+        {
+            const input1Element = document.getElementById("input1");
+            const input2Element = document.getElementById("input2");
+
+            const resultElement = document.getElementById("match-result-text");
+
+            if(input1Element.value == input2Element.value){
+                resultElement.innerText = `Matched!!!`
+                resultElement.style.color = "green"
+            }
+            else{
+                resultElement.innerText = `Not Matched!!!`
+                resultElement.style.color = "red"
+            }
+        }
     </script>
 </body>
 </html>
