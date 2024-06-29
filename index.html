@@ -83,6 +83,17 @@
 
             resultElement.innerText = `Sum: ${sum}`
         }
+        function reset()
+        {
+            const num1Element = document.getElementById("input-num1");
+            num1Element.value = "";
+
+            const num2Element = document.getElementById("input-num2");
+            num2Element.value = "";
+
+            const resetElement = document.getElementById("text-result");
+            resultElement.innerText = ``;
+        }
     </script>
 </body>
 
